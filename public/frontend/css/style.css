@@ -1,0 +1,24 @@
+
+
+.mt-25{
+    margin-top: 25px;
+}
+.product-image{
+    max-height: 180px;
+}
+
+
+/*-------- footer Area start ---------*/
+
+.footer-bottom{
+    background-color: #313131; 
+    padding: 5px 0;
+}
+
+.footer-bottom p{ 
+    color: #fff;
+    font-size: 18px; 
+    margin-top: 15px;
+}
+
+/*-------- footer Area Ends ---------*/
