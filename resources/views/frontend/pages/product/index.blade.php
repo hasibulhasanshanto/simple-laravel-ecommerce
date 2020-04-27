@@ -28,8 +28,8 @@ Product Page
                             @php $i= 1; @endphp
                             @foreach ($product->images as $image)
                             @if ($i>0)
-                            <img src="{{ asset('frontend/images/'.$image->image) }}" class="card-img-top product-image"
-                                alt="Product Image">
+                            <img src="{{ asset('backend/images/products/'.$image->image) }}"
+                                class="card-img-top product-image" alt="Product Image">
                             @endif
 
                             @php $i--; @endphp
