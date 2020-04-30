@@ -1,23 +1,140 @@
+/*-------- Global CSS start ---------*/
+/* Link underline */
+a:hover, a:visited, a:link, a:active {
 
+    text-decoration: none!important;
 
-.mt-25{
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+}
+
+/*-------- Global CSS End ---------*/
+
+.mt-25 {
     margin-top: 25px;
 }
-.product-image{
+.product-image {
     max-height: 180px;
 }
+.navbar {
+    padding: 15px !important;
+}
+.search_bar {
+    margin-bottom: 0;
+}
+.input-group > .form-control,
+.input-group > .form-control-plaintext,
+.input-group > .custom-select,
+.input-group > .custom-file {
+    width: 500px !important;
+    height: 50px;
+}
+
+.child-rows {
+    padding-left: 20px;
+    background: #fff;
+}
+
+/*-------- Sidebar Menu Area start ---------*/
+.mainmenu {
+    font-size: 16px;
+    position: relative;
+    padding: 0;
+    max-width: 276px;
+}
+
+.mainmenu > li {
+    background-color: #e4644b;
+    border-top: 1px solid #d05942;
+    height: 48px;
+    color: #f7f1e3;
+    box-sizing: border-box;
+}
+
+.mainmenu > li:first-child {
+    /* border-radius: 7px 7px 0 0; */
+    border-top: 0;
+}
+
+/* .mainmenu > li:last-child { border-radius: 0 0 7px 7px; } */
+
+.mainmenu > li span {
+    display: block;
+    line-height: 48px;
+}
+
+.mainmenu > li .icon {
+    padding: 14px 12px 0 20px;
+    float: left;
+    /* width: 20px; */
+    height: 20px;
+    display: block;
+}
+
+.expand-triangle {
+    background: url("/frontend/images/menu/expand.gif") top left no-repeat;
+    height: 10px;
+    width: 276px;
+    content: " ";
+    margin-left: -40px;
+}
+/*-------- Sub Menu Area ---------*/
+.submenu {
+    box-sizing: border-box;
+    color: #ae9f9f;
+    font-size: 13px;
+    content: " "; /*opacity: 0.5;*/
+}
+
+.submenu li {
+    line-height: 20px;
+    height: 35px;
+    padding-top: 11px;
+    margin-left: -40px;
+    background-color: #484141;
+    border-left: solid 6px #484141;
+    transition: border-left 220ms ease-in;
+}
+
+.submenu .chosen,
+.submenu .chosen:hover {
+    border-left: solid 6px #96d145;
+}
+
+.submenu li:hover {
+    border-left: solid 6px #d05942;
+}
+
+.submenu li span {
+    margin-left: 30px;
+}
+/*-------- Sidebar Menu Area End ---------*/
+
+
+
+/*-------- Single Product Area start ---------*/
+.carousel-inner { 
+    border: 2px solid #000 !important;
+}
+input.item_num {
+    width: 60px !important;
+    padding-left: 10px;
+}
+/*-------- Single Product Area End ---------*/
+
+
 
 
 /*-------- footer Area start ---------*/
 
-.footer-bottom{
-    background-color: #313131; 
+.footer-bottom {
+    background-color: #313131;
     padding: 5px 0;
 }
 
-.footer-bottom p{ 
+.footer-bottom p {
     color: #fff;
-    font-size: 18px; 
+    font-size: 18px;
     margin-top: 15px;
 }
 

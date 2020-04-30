@@ -11,40 +11,84 @@
                 </div>
             </div>
         </li>
-        <li class="nav-item"><a class="nav-link" href="{{ route('dashboard') }}"><img class="menu-icon"
-                    src="{{ asset('/backend/images')}}/menu_icons/01.png" alt="menu icon"><span
-                    class="menu-title">Dashboard</span></a></li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false"
-                aria-controls="general-pages"> <img class="menu-icon"
-                    src="{{ asset('/backend/images')}}/menu_icons/02.png" alt="menu icon"> <span
-                    class="menu-title">Products</span><i class="menu-arrow"></i></a>
-            <div class="collapse" id="general-pages">
+            <a class="nav-link" href="{{ route('dashboard') }}">
+                <img class="menu-icon" src="{{ asset('/backend/images')}}/menu_icons/01.png" alt="menu icon"><span
+                    class="menu-title">Dashboard</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#category" aria-expanded="false" aria-controls="category">
+                <img class="menu-icon" src="{{ asset('/backend/images')}}/menu_icons/02.png" alt="menu icon"> <span
+                    class="menu-title">Category</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="category">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('category.index') }}">All Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('category.create') }}">Add Category</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#brand-pages" aria-expanded="false"
+                aria-controls="brand-pages"> <img class="menu-icon"
+                    src="{{ asset('/backend/images')}}/menu_icons/07.png" alt="menu icon">
+                <span class="menu-title">Brands</span><i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="brand-pages">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('brand.index') }}">All Brands</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('brand.create') }}">Add Brand</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#product-pages" aria-expanded="false"
+                aria-controls="product-pages"> <img class="menu-icon"
+                    src="{{ asset('/backend/images')}}/menu_icons/07.png" alt="menu icon">
+                <span class="menu-title">Products</span><i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="product-pages">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('product.all') }}">All Products</a>
                     </li>
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('product.create') }}">Create Product</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('product.make') }}">Add Product</a>
                     </li>
                 </ul>
             </div>
         </li>
         <li class="nav-item"><a class="nav-link" href="pages/ui-features/buttons.html"><img class="menu-icon"
                     src="{{ asset('/backend/images')}}/menu_icons/03.png" alt="menu icon"><span
-                    class="menu-title">Buttons</span></a></li>
+                    class="menu-title">Buttons</span></a>
+        </li>
         <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html"><img class="menu-icon"
                     src="{{ asset('/backend/images')}}/menu_icons/04.png" alt="menu icon"><span
-                    class="menu-title">Form</span></a></li>
+                    class="menu-title">Form</span></a>
+        </li>
         <li class="nav-item"><a class="nav-link" href="pages/charts/chartjs.html"><img class="menu-icon"
                     src="{{ asset('/backend/images')}}/menu_icons/05.png" alt="menu icon"><span
-                    class="menu-title">Charts</span></a></li>
+                    class="menu-title">Charts</span></a>
+        </li>
         <li class="nav-item"><a class="nav-link" href="pages/tables/basic-table.html"><img class="menu-icon"
                     src="{{ asset('/backend/images')}}/menu_icons/06.png" alt="menu icon"><span
                     class="menu-title">Table</span></a>
         </li>
         <li class="nav-item"><a class="nav-link" href="pages/icons/font-awesome.html"><img class="menu-icon"
                     src="{{ asset('/backend/images')}}/menu_icons/07.png" alt="menu icon"> <span
-                    class="menu-title">Icons</span></a></li>
+                    class="menu-title">Icons</span></a>
+        </li>
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false"
                 aria-controls="general-pages"> <img class="menu-icon"

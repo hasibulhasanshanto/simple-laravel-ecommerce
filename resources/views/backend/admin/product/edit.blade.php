@@ -1,7 +1,7 @@
 @extends('backend.master')
 
 @section('title')
-Create Product
+Edit Product
 @endsection
 
 @section('content')
@@ -13,9 +13,9 @@ Create Product
                     Products
                 </div>
                 <div class="card-body">
-                    <h4 class="card-title">Create Product</h4>
+                    <h4 class="card-title">Edit Product</h4>
 
-                    <form class="forms-sample" action="{{ route('product.store') }}" method="POST"
+                    <form class="forms-sample" action="{{ route('product.update', $product->id) }}" method="POST"
                         enctype="multipart/form-data">
                         @csrf
 
@@ -24,7 +24,7 @@ Create Product
                         <div class="form-group row">
                             <label for="title" class="col-sm-3 col-form-label">Title</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="title" placeholder="Enter title">
+                                <input type="text" class="form-control" name="title" value="{{  $product->title }}">
                             </div>
                         </div>
 
@@ -53,20 +53,21 @@ Create Product
                         <div class="form-group row">
                             <label for="price" class="col-sm-3 col-form-label">Price</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="price" placeholder="Price">
+                                <input type="text" class="form-control" name="price" value="{{  $product->price }}">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="offer_price" class="col-sm-3 col-form-label">Offer Price</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="offer_price" placeholder="Offer Price">
+                                <input type="text" class="form-control" name="offer_price"
+                                    value="{{  $product->offer_price }}">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="qty" class="col-sm-3 col-form-label">Quantity</label>
                             <div class="col-sm-9">
-                                <input type="number" min="1" class="form-control" name="qty" value="1">
-                                {{-- placeholder="Quantity" --}}
+                                <input type="number" min="1" class="form-control" name="qty"
+                                    value="{{  $product->qty }}">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -79,7 +80,7 @@ Create Product
                             <label for="description" class="col-sm-3 col-form-label">Description</label>
                             <div class="col-sm-9">
                                 <textarea name="description" class="form-control" cols="30" rows="6"
-                                    placeholder="Description"></textarea>
+                                    placeholder="Description">{{  $product->description }}</textarea>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -104,7 +105,7 @@ Create Product
                         </div>
 
                         <div class="submitBtn pt-4">
-                            <button type="submit" class="btn btn-success mr-2">Create</button>
+                            <button type="submit" class="btn btn-success mr-2">Update</button>
                             <a class="btn btn-light" href="{{ route('product.all') }}">Back</a>
                         </div>
                     </form>

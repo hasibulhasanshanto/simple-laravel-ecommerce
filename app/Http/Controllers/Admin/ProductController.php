@@ -19,7 +19,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::orderBy('id', 'desc')->paginate(10);
-        return view('backend.admin.product.products', compact('products'));
+        return view('backend.admin.product.index', compact('products'));
     }
 
     /**
@@ -27,7 +27,7 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function make()
     {
         return view('backend.admin.product.create');
     }
@@ -49,6 +49,8 @@ class ProductController extends Controller
             'qty' => 'required|numeric', 
             'description' => 'required', 
             'status' => 'required', 
+            'image' => 'required',
+            'image*' => 'image|mimes:jpeg,png,jpg|max:2050',
             //'admin_id' => 'required', 
         ]);
         //return $request->all();
@@ -70,22 +72,29 @@ class ProductController extends Controller
         
         $product->save();        
 
-        // Insert image into ProductImage Model
-        if ($request->hasFile('image')) {
-            // Insert that image
-            $image = $request->file('image');
-            $imgName = $product->slug. '.'. $image->getClientOriginalExtension();
-            $location = public_path('backend/images/products/'.$imgName);
-            Image::make($image)->save($location);
-
-            $product_image = new ProductImage();
-            $product_image->product_id = $product->id;
-            $product_image->image =  $imgName;
-            $product_image->save();
+        //Insert image into ProductImage Model
+        // if ($request->hasFile('image')) {
+        //     // Insert that image 
+        //  The following code
             
+        // }
+
+        if (count($request->image) > 0) {
+            foreach ($request->image as$image) {
+                //$image = $request->file('image');
+                $imgName = $product->slug.'-'.uniqid().'.'. $image->getClientOriginalExtension();
+                $location = public_path('backend/images/products/'.$imgName);
+                Image::make($image)->save($location);
+
+                $product_image = new ProductImage();
+                $product_image->product_id = $product->id;
+                $product_image->image =  $imgName;
+                $product_image->save();
+            }
         }
 
-        return redirect()->back();
+        session()->flash('success', 'Product Added Sucessfully !!');
+        return redirect()->route('product.all');
     }
 
     /**
@@ -107,7 +116,8 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product = Product::findOrFail($id);
+        return view('backend.admin.product.edit', compact('product'));
     }
 
     /**
@@ -119,7 +129,35 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //Validate Products
+        $request->validate([
+            'title' => 'required|max:255', 
+            'category_id' => 'required', 
+            'brand_id' => 'required', 
+            'price' => 'required|numeric',   
+            'qty' => 'required|numeric', 
+            'description' => 'required', 
+            'status' => 'required',  
+            //'admin_id' => 'required', 
+        ]); 
+
+        //Save to Database with Product Object
+        $product = Product::findOrFail( $id);
+
+        $product->title = $request->title;
+        $product->slug = Str::slug($request->title);
+        $product->category_id = $request->category_id;
+        $product->brand_id = $request->brand_id; 
+        $product->price = $request->price;
+        $product->offer_price = $request->offer_price;
+        $product->qty = $request->qty;
+        $product->description = $request->description;
+        $product->status = $request->status; 
+        
+        $product->save();        
+ 
+        session()->flash('success', 'Product Updated Sucessfully !!');
+        return redirect()->route('product.all');
     }
 
     /**
@@ -130,6 +168,13 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+       $product = Product::findOrFail( $id);
+
+        if (!is_null($product)) {
+            $product->delete();
+        }
+
+        session()->flash('success', 'Product Deleted Sucessfully !!');
+        return back();
     }
 }

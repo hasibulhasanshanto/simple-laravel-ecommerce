@@ -14,7 +14,7 @@ Product Page
             <div class="widget">
                 <nav aria-label="breadcrumb bg-primary">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item active" aria-current="page"><strong>all Products</strong></li>
+                        <li class="breadcrumb-item active" aria-current="page"><strong>Searched Products</strong></li>
                     </ol>
                 </nav>
                 @include('backend.includes.messages')
@@ -53,6 +53,23 @@ Product Page
                         </div>
                     </div>
                     @endforeach
+
+                    @if ($products == 'empty')
+                    <div class="col-md-12">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <br>
+                                <br>
+                                <p class="card-text"><strong>Sorry! We couldn't found this !! Please Search
+                                        Again.....</strong>
+                                </p>
+                                <br>
+                                <br>
+
+                            </div>
+                        </div>
+                    </div>
+                    @endif
                     <!-- ./End Single Product Area-->
                 </div>
             </div>

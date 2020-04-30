@@ -79,6 +79,186 @@ Home Page
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-3">
+                        <div class="card text-center mb-3">
+                            <img src="{{ asset('frontend/images/mi.jpg') }}" class="card-img-top product-image"
+                                alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Tk: 23500</h5>
+                                <a href="#" class="btn  btn-outline-primary">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center mb-3">
+                            <img src="{{ asset('frontend/images/nokia.jpg') }}" class="card-img-top product-image"
+                                alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Tk. 23500</h5>
+                                <a href="#" class="btn  btn-outline-primary">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center mb-3">
+                            <img src="{{ asset('frontend/images/nokia2.jpg') }}" class="card-img-top product-image"
+                                alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Tk. 23500</h5>
+                                <a href="#" class="btn  btn-outline-primary">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center mb-3">
+                            <img src="{{ asset('frontend/images/nokia3.jpg') }}" class="card-img-top product-image"
+                                alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Tk. 23500</h5>
+                                <a href="#" class="btn  btn-outline-primary">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center mb-3">
+                            <img src="{{ asset('frontend/images/nokia3.jpg') }}" class="card-img-top product-image"
+                                alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Tk. 23500</h5>
+                                <a href="#" class="btn  btn-outline-primary">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center mb-3">
+                            <img src="{{ asset('frontend/images/nokia3.jpg') }}" class="card-img-top product-image"
+                                alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Tk. 23500</h5>
+                                <a href="#" class="btn  btn-outline-primary">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center mb-3">
+                            <img src="{{ asset('frontend/images/mi.jpg') }}" class="card-img-top product-image"
+                                alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Tk: 23500</h5>
+                                <a href="#" class="btn  btn-outline-primary">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center mb-3">
+                            <img src="{{ asset('frontend/images/nokia.jpg') }}" class="card-img-top product-image"
+                                alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Tk. 23500</h5>
+                                <a href="#" class="btn  btn-outline-primary">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center mb-3">
+                            <img src="{{ asset('frontend/images/nokia2.jpg') }}" class="card-img-top product-image"
+                                alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Tk. 23500</h5>
+                                <a href="#" class="btn  btn-outline-primary">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center mb-3">
+                            <img src="{{ asset('frontend/images/nokia3.jpg') }}" class="card-img-top product-image"
+                                alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Tk. 23500</h5>
+                                <a href="#" class="btn  btn-outline-primary">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center mb-3">
+                            <img src="{{ asset('frontend/images/nokia3.jpg') }}" class="card-img-top product-image"
+                                alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Tk. 23500</h5>
+                                <a href="#" class="btn  btn-outline-primary">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center mb-3">
+                            <img src="{{ asset('frontend/images/nokia3.jpg') }}" class="card-img-top product-image"
+                                alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Tk. 23500</h5>
+                                <a href="#" class="btn  btn-outline-primary">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center mb-3">
+                            <img src="{{ asset('frontend/images/mi.jpg') }}" class="card-img-top product-image"
+                                alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Tk: 23500</h5>
+                                <a href="#" class="btn  btn-outline-primary">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center mb-3">
+                            <img src="{{ asset('frontend/images/nokia.jpg') }}" class="card-img-top product-image"
+                                alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Tk. 23500</h5>
+                                <a href="#" class="btn  btn-outline-primary">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center mb-3">
+                            <img src="{{ asset('frontend/images/nokia2.jpg') }}" class="card-img-top product-image"
+                                alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Tk. 23500</h5>
+                                <a href="#" class="btn  btn-outline-primary">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center mb-3">
+                            <img src="{{ asset('frontend/images/nokia3.jpg') }}" class="card-img-top product-image"
+                                alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Tk. 23500</h5>
+                                <a href="#" class="btn  btn-outline-primary">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center mb-3">
+                            <img src="{{ asset('frontend/images/nokia3.jpg') }}" class="card-img-top product-image"
+                                alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Tk. 23500</h5>
+                                <a href="#" class="btn  btn-outline-primary">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center mb-3">
+                            <img src="{{ asset('frontend/images/nokia3.jpg') }}" class="card-img-top product-image"
+                                alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Tk. 23500</h5>
+                                <a href="#" class="btn  btn-outline-primary">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
