@@ -32,10 +32,15 @@ Create Product
                             <label for="price" class="col-sm-3 col-form-label">Select Category</label>
                             <div class="col-sm-9">
                                 <select class="form-control" name="category_id">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
+                                    <option value="">Please Select a Category </option>
+                                    @foreach (App\Model\Category::orderBy('cat_name', 'asc')->where('parent_id',
+                                    NULL)->get() as $parent)
+                                    <option value="{{ $parent->id }}">{{ $parent->cat_name }}</option>
+                                    @foreach (App\Model\Category::orderBy('cat_name', 'asc')->where('parent_id',
+                                    $parent->id)->get() as $child)
+                                    <option value="{{ $child->id }}"> -> {{ $child->cat_name }}</option>
+                                    @endforeach
+                                    @endforeach
                                 </select>
                             </div>
                         </div>
@@ -43,10 +48,10 @@ Create Product
                             <label for="price" class="col-sm-3 col-form-label">Select Barnd</label>
                             <div class="col-sm-9">
                                 <select class="form-control" name="brand_id">
-                                    <option value="1">Abc</option>
-                                    <option value="2">Def</option>
-                                    <option value="3">Xyz</option>
-                                    <option value="4">XXX</option>
+                                    <option value="">Please Select a Brand </option>
+                                    @foreach (App\Model\Brand::orderBy('br_name', 'asc')->get() as $brand)
+                                    <option value="{{ $brand->id }}">{{ $brand->br_name }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>

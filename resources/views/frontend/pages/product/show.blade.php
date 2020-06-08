@@ -34,6 +34,10 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
+            <div class="mt-3">
+                <p> Category: <span class="badge badge-info">{{ $product->category->cat_name }}</span></p>
+                <p> Brand: <span class="badge badge-info">{{ $product->brand->br_name }}</span></p>
+            </div>
         </div>
         <div class="col-md-9">
             <div class="widget px-5">

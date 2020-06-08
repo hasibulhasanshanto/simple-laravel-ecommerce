@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\Product;
+use App\Model\Category;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
@@ -47,5 +48,16 @@ class FrontController extends Controller
         }
         
         //return view('frontend.pages.product.search', compact('products', 'search'));
+    }
+
+    public function categoryShow($id){
+        $category = Category::findOrFail($id);
+        
+        if($category){
+            return view('frontend.pages.category.show', compact('category'));
+        } else{
+            session()->flash('error', 'Sorry!!, There is no category by this ID');
+            return redirect()->back();
+        }
     }
 }
